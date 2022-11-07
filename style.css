@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Inter&family=Megrim&family=Poor+Story&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Inter&family=Megrim&family=Oldenburg&family=Poor+Story&family=Roboto+Condensed&family=Roboto:wght@300&family=Salsa&family=Ubuntu:wght@300&display=swap');
 
 :root {
-    --body-color: ;
+    --orange-color: #CC6226;
+    --hover-color: #8c4014;
+    --background-color:  #efefef;
 }
 
 p{
@@ -10,15 +12,22 @@ p{
 }
 
 body {
-    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(49, 45, 45);
 }
 
 main {
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
+    border-radius: 8px;
     height: 590px;
-    width: 100%;
+    width: 98%;
+    padding: 0.5rem;
+    margin-bottom: 20px;
+    /* box-shadow: 5px 5px rgb(166, 100, 100), -5px -5px white 10px; */
 }
 
 .left-container {
@@ -27,6 +36,8 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
 }
 
 .logo-container {
@@ -35,7 +46,7 @@ main {
     top: 90px;
     right: 0;
     left: 0;
-    height: 100px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +62,7 @@ main {
 .logo-text {
     color: rgb(0, 0, 0);
     opacity: 1; 
-    font-size: 60px;
+    font-size: clamp(15px, 40px, 60px);
     font-family: "Megrim", cursive;
     font-weight: bold;
 }
@@ -67,4 +78,181 @@ main {
 
 .credit-text{
     font-family: "Roboto", sans-serif;
+    color: white;
+}
+
+.credit-text a{
+    color: white;
+}
+
+.credit-text a:visited {
+    color: black;
+}
+
+.right-container {
+    background-color: var(--background-color);
+    width: 60%;
+    padding: 2rem 15px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.disclaimer-text p{
+    font-family: "Ubuntu", sans-serif;
+    font-size: 19px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form-container h3 {
+    font-family: "Salsa", cursive, sans-serif;
+    margin: 0;
+    font-size: 20px;
+    color: var(--orange-color);
+}
+
+form {
+    border-radius: 6px;
+    background-color: white;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 350px;
+}
+
+.first-last-name-container {
+    display: flex;
+    gap: 30px;
+}
+
+.first-name-container,
+.last-name-container,
+.email-container,
+.phone-number-container,
+.password-container,
+.confirm-password-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-name-container label,
+.last-name-container label,
+.email-container label,
+.phone-number-container label,
+.password-container label,
+.confirm-password-container label{
+    font-family: 'Oldenburg', cursive;
+}
+
+.first-name-container input,
+.last-name-container input{
+    background-color: var(--background-color);
+    border: none;
+    outline: 1px solid black;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+    height: 25px;
+    padding: 0 0 0 0.5rem;
+}
+
+.first-name-container input:valid {
+    outline: 1px solid green;
+}
+
+.first-name-container input:invalid {
+    outline: 1px solid red;
+}
+
+.email-container input,
+.phone-number-container input,
+.password-container input,
+.confirm-password-container input {
+    background-color: var(--background-color);
+    height: 25px;
+    padding: 0 0 0 0.5rem;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 15px;
+    border: none;
+    outline: 1px solid black;
+}
+
+.email-container input:valid,
+.phone-number-container input:valid,
+.password-container input:valid,
+.confirm-password-container input:valid{
+    outline: 1px solid green;
+}
+
+.email-container input:invalid,
+.phone-number-container input:invalid,
+.password-container input:invalid,
+.confirm-password-container input:invalid{
+    outline: 1px solid red;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#create-btn {
+    font-family: "Comic Neue", sans-serif;
+    font-size: 18px;
+    background-color: var(--orange-color);
+    border: none;
+    color: rgb(246, 246, 246);
+    padding: 8px 40px;
+    border-radius: 6px;
+    transition: 0.15s;
+}
+
+#create-btn:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
+
+.already-have-acc-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.already-have-acc-container p{
+    font-family: "Salsa", cursive, sans-serif;
+    font-size: 18px;
+}
+
+.log-in a{
+    color: var(--orange-color);
+}
+
+.log-in a:hover {
+    color: var(--hover-color);
+}
+
+footer {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    margin-top: auto;
+}
+
+footer p {
+    font-family: "Poor story", cursive, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+footer a {
+    color: white;
 }
