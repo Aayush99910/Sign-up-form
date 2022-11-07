@@ -5,25 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up form</title>
+    <link rel="icon" href="img/signup.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="app.js" defer></script>
 </head>
 <body>
 
     <main>
+
         <section class="left-container">
             <div class="logo-container">
                 <img class="coffee-icon" src="img/coffee.png">
-                <p class="logo-text">CHAI</p>
+                <p class="logo-text">CHIYA</p>
             </div>
             <div class="credit-text-container">
                 <p class="credit-text">
-                    Photo by <a href="">Ömer Haktan Bulut</a> on <a href="">unsplash.com</a>
+                    Photo by <a href="https://unsplash.com/@omerhaktan" target="_blank">Ömer Haktan Bulut</a> on <a href="https://unsplash.com/" target="_blank">unsplash.com</a>
                 </p>
             </div>
         </section>
-        <section class="right-container"></section>
+
+        <section class="right-container">
+            <div class="disclaimer-text">
+                <p>This is not a real online servcie! This is a fake wepage just used to practice HTML forms. Below is also a fake sign up form!!</p>
+            </div>
+            <div class="form-container">
+                <h3>Sign up form</h3>
+                <form>
+                    <div class="first-last-name-container">
+                        <div class="first-name-container">
+                            <label for="first_name">First Name*</label>
+                            <input autocomplete="off" type="text" id="first_name" name="firstName" required>
+                        </div>
+
+                        <div class="last-name-container">
+                            <label for="last_name">Last Name</label>
+                            <input autocomplete="off" type="text" id="last_name" name="lastName">
+                        </div>
+                    </div>
+
+                    <div class="email-container">
+                        <label for="mail">Email Address*</label>
+                        <input autocomplete="off" type="email" id="mail" name="user_mail" required>
+                    </div>
+
+                    <div class="phone-number-container">
+                        <label for="phone_number">Phone Number*</label>
+                        <input autocomplete="off" type="tel" id="phone_number" name="user_phone" required>
+                    </div>
+
+                    <div class="password-container">
+                        <label for="password">Password*</label>
+                        <input autocomplete="off" type="password" id="password" name="user_password" required>
+                    </div>
+
+                    <div class="confirm-password-container">
+                        <label for="confirm_password">Confirm Password*</label>
+                        <input type="password" id="confirm_password" name="user_confirm_password" required>
+                    </div>
+
+                    <div class="button-container">
+                        <button type="submit" id="create-btn">Create account</button>
+                    </div>
+                </form>
+                <div class="already-have-acc-container">
+                    <p>Already have an account? <span class="log-in"><a href="#">Log in</a></p></span>
+                </div>
+            </div>
+        </section>
+
     </main>
     
+    <footer>
+        <p>&#169;Copyright. Made by Aayush.</p>
+        <a href="https://github.com/Aayush99910/Sign-up-form" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </footer>
 </body>
 </html>
