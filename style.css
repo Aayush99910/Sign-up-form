@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Inter&family=Megrim&family=Poor+Story&family=Roboto+Condensed&display=swap');
+
+:root {
+    --body-color: ;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 0.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    height: 590px;
+    width: 100%;
+}
+
+.left-container {
+    width: 40%;
+    background: url(img/car.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.logo-container {
+    background-color: #efefef;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    left: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.coffee-icon {
+    color: black;
+    opacity: 1;
+    height: 60px;
+}
+
+.logo-text {
+    color: rgb(0, 0, 0);
+    opacity: 1; 
+    font-size: 60px;
+    font-family: "Megrim", cursive;
+    font-weight: bold;
+}
+
+.credit-text-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.credit-text{
+    font-family: "Roboto", sans-serif;
+}
