@@ -119,11 +119,12 @@ main {
 form {
     border-radius: 6px;
     background-color: white;
-    padding: 15px 10px;
+    padding: 8px 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 350px;
+    justify-content: center;
+    gap: 10px;
+    height: 400px;
 }
 
 .first-last-name-container {
@@ -153,39 +154,89 @@ form {
 .first-name-container input,
 .last-name-container input{
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2.5px solid black;
     font-family: "Ubuntu", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     height: 25px;
     padding: 0 0 0 0.5rem;
 }
 
-.first-name-container input:focus {
+.first-name-container input:focus,
+.last-name-container input:focus {
     outline: none;
 }
 
-.first-name-container input:valid {
-    border-bottom: 2px solid green;
+.first-name-container input:valid,
+.last-name-container input:valid {
+    border-bottom: 2.5px solid green;
 }
-
 
 .email-container input,
 .phone-number-container input,
-.password-container input,
-.confirm-password-container input {
+.password-container input[type=password],
+.confirm-password-container input[type=password] {
     height: 25px;
     padding: 0 0 0 0.5rem;
     font-family: "Ubuntu", sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     border: none;
-    border-bottom: 2px solid black;
+    border-bottom: 2.5px solid black;
+}
+
+.password-container input[type=text],
+.confirm-password-container input[type=text] {
+    height: 25px;
+    padding: 0 0 0 0.5rem;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2.5px solid black;
+}
+
+.password-container,
+.confirm-password-container {
+    gap: 5px;
+}
+
+#showpassword {
+    align-self: flex-start;
+}
+
+.email-container input:focus,
+.phone-number-container input:focus,
+.password-container input:focus,
+.confirm-password-container input:focus {
+    outline: none;
 }
 
 .email-container input:valid,
-.phone-number-container input:valid,
-.password-container input:valid,
-.confirm-password-container input:valid{
-    border-bottom: 2px solid green;
+.phone-number-container input:valid{
+    border-bottom: 2.5px solid green;
+}
+
+.confirm-password-container p,
+.password-container p {
+    font-family: "Comic Neue", sans-serif, cursive;
+    font-size: 14px;
+    color: red;
+    transition: 0.15s;
+}
+
+
+.border-red {
+    border-bottom: 2.5px solid red;
+}
+
+.border-green {
+    border-bottom: 2.5px solid green;
+}
+
+.hide-error {
+    display: none;
+}
+
+.show-error {
+    display: flex;
 }
 
 .button-container {
@@ -214,7 +265,6 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
 }
 
 .already-have-acc-container p{
