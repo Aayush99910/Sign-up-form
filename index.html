@@ -40,8 +40,8 @@
                         </div>
 
                         <div class="last-name-container">
-                            <label for="last_name">Last Name</label>
-                            <input autocomplete="off" type="text" id="last_name" name="lastName">
+                            <label for="last_name">Last Name*</label>
+                            <input autocomplete="off" type="text" id="last_name" name="lastName" required>
                         </div>
                     </div>
 
@@ -58,15 +58,18 @@
                     <div class="password-container">
                         <label for="password">Password*</label>
                         <input autocomplete="off" type="password" id="password" name="user_password" required>
+                        <p id="password_check" class="hide-error"><i class="fa-solid fa-circle-exclamation"></i>The passwords don't match.</p>
                     </div>
 
                     <div class="confirm-password-container">
                         <label for="confirm_password">Confirm Password*</label>
                         <input type="password" id="confirm_password" name="user_confirm_password" required>
+                        <p id="password_check1" class="hide-error"><i class="fa-solid fa-circle-exclamation"></i>The passwords don't match.</p>
+                        <div><input type="checkbox" id="showpassword" name="showpassword"><label for="showpassword">Show passwords</label></div>
                     </div>
 
                     <div class="button-container">
-                        <button type="submit" id="create-btn">Create account</button>
+                        <button type="button" id="create-btn">Create account</button>
                     </div>
                 </form>
                 <div class="already-have-acc-container">
