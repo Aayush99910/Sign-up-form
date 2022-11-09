@@ -71,7 +71,7 @@
         background: none;
         display: flex;
         height: 80px;
-        width: 70%;
+        width: 85%;
         position: relative;
         padding: 0rem 15px;
     }
@@ -97,6 +97,7 @@
     .right-container {
         border-bottom-right-radius: 6px;
         border-bottom-left-radius: 6px;
+        width: 85%;
     }
 
     .left-container {
