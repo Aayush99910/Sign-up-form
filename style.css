@@ -71,7 +71,7 @@
         background: none;
         display: flex;
         height: 80px;
-        width: 60%;
+        width: 80%;
         position: relative;
         padding: 0rem 15px;
     }
@@ -161,7 +161,7 @@ main {
 
 .right-container {
     background-color: var(--background-color);
-    width: 60%;
+    width: 80%%;
     padding: 2rem 15px;
 }
 
